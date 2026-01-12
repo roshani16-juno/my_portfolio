@@ -1,0 +1,67 @@
+/* Hero.css */
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Start from below */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* End at original position */
+    }
+  }
+  
+  .button-animate {
+    transition: transform 0.3s;
+  }
+  
+  .button-animate:hover {
+    transform: scale(1.05); /* Smooth hover scaling */
+  }
+  
+  /* Typing Animation for Heading */
+  .typing-effect {
+    display: inline-block;
+    border-right: 2px solid;
+    white-space: nowrap; 
+    overflow: hidden; 
+    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  /* Typing Animation for Paragraph */
+  .typing-effect-p {
+    display: inline-block;
+    border-right: 2px solid;
+    white-space: nowrap; 
+    overflow: hidden; 
+    animation: typing-p 4s steps(50, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%; /* Set this width to match the text length */
+    }
+  }
+  
+  @keyframes typing-p {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%; /* Set this width to match the paragraph length */
+    }
+  }
+  
+  @keyframes blink-caret {
+    50% {
+      border-color: transparent; /* Cursor blink effect */
+    }
+  }
+  
